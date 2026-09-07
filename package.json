@@ -2,7 +2,6 @@
   "name": "akashic-dashboard",
   "version": "1.0.0",
   "description": "Tactical OSINT Dashboard - UI layer for Akashic",
-  "private": true,
   "license": "AGPL-3.0-or-later",
   "main": "index.js",
   "exports": {
@@ -76,5 +75,16 @@
   "overrides": {
     "@xmldom/xmldom": "0.9.10",
     "postcss": "$postcss"
+  },
+  "files": [
+    "lib/**/*",
+    "app/**/*",
+    "components/**/*",
+    "index.js",
+    "README.md",
+    "package.json"
+  ],
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/"
   }
 }
