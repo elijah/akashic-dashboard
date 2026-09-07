@@ -1,9 +1,36 @@
 {
   "name": "akashic-dashboard",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "Tactical OSINT Dashboard - UI layer for Akashic",
   "private": true,
   "license": "AGPL-3.0-or-later",
+  "main": "index.js",
+  "exports": {
+    ".": {
+      "import": "./index.js",
+      "require": "./index.js"
+    },
+    "./components/intelligence/*": "./components/intelligence/*",
+    "./components/layout/*": "./components/layout/*",
+    "./components/map/*": "./components/map/*",
+    "./components/modals/*": "./components/modals/*",
+    "./components/popups/*": "./components/popups/*",
+    "./components/sidebars/*": "./components/sidebars/*",
+    "./components/civic-visualizations/*": "./components/civic-visualizations/*",
+    "./app/layout": "./app/layout.tsx",
+    "./app/page": "./app/page.tsx",
+    "./app/globals": "./app/globals.css",
+    "./lib/geo-intelligence/types": "./lib/geo-intelligence/types.ts",
+    "./lib/geo-intelligence/worldmonitor-core": "./lib/geo-intelligence/worldmonitor-core.ts",
+    "./lib/geo-intelligence/worldmonitor-feed": "./lib/geo-intelligence/worldmonitor-feed.ts",
+    "./lib/geo-intelligence/live-deck-core": "./lib/geo-intelligence/live-deck-core.ts",
+    "./lib/live/cameras": "./lib/live/cameras.ts",
+    "./lib/weather/map-core": "./lib/weather/map-core.ts",
+    "./lib/recon/core": "./lib/recon/core.ts",
+    "./lib/sigint/core": "./lib/sigint/core.ts",
+    "./lib/sigint/sources": "./lib/sigint/sources.ts",
+    "./lib/resolution/fuzzy_match": "./lib/resolution/fuzzy_match.ts"
+  },
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -45,5 +72,9 @@
     "postcss": "8.5.17",
     "tailwindcss": "^3.4.1",
     "typescript": "^5"
+  },
+  "overrides": {
+    "@xmldom/xmldom": "0.9.10",
+    "postcss": "$postcss"
   }
 }
